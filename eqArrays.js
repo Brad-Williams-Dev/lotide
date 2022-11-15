@@ -4,22 +4,18 @@ const assertEqual = function (actual, expected) {
 
 const eqArrays = function (array1, array2) {
 
-  let isTrue = false;
+  let count = 0;
 
   for (let i = 0; i < array1.length; i++) {
-    if (array1[i] === array2[0 + i]) {
-      isTrue = true
-    } else {
-      isTrue = false;
+    if (array1[i] === array2[i]) {
+      count++;
     }
-    if (isTrue === false) {
-      return false;
-    }
+
   }
-  return isTrue;
+  return count === array1.length ? true : false;
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 1, 3], [1, 2, 3]), false);
 assertEqual(eqArrays([1, 2, 3], [1, 2, '3']), false);
 assertEqual(eqArrays(['1', '2', '3'], ['1', '2', '3']), true);
 assertEqual(eqArrays([1, 2, 9], [3, 2, 1]), false);
