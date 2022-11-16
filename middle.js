@@ -25,7 +25,7 @@ const middle = function(array) {
   let middleOfArray = [];
   let middleIndex = Math.floor(array.length / 2); //Gets the middle index of the array, if not a whole number, it rounds it up to the nearest whole number.
 
-  if (array.length < 2) { return middleOfArray; }; //Checks if the array has 2 numbers or less, then returns an empty array.
+  if (array.length <= 2) { return middleOfArray; }; //Checks if the array has 2 numbers or less, then returns an empty array.
 
   if (array.length % 2 === 0) { //Checks if array has an even amount of numbers, then pushes the middleIndex - 1, then the middleIndex.
     middleOfArray.push(array[middleIndex - 1]);
@@ -40,8 +40,12 @@ const middle = function(array) {
 
 };
 
-// console.log(middle([1]));
+console.log(middle([1]));
+console.log(middle([1, 2]));
+console.log(middle([1, 2, 3]));
+console.log(middle([1, 2, 4, 5, 6]));
+
 // console.log(assertArraysEqual([1, 2, 3, 4], [1, 3, 4]));
 // console.log(eqArrays([1, 2, 3, 4], [1, 2, 3, 4]));
 
-console.log(assertArraysEqual(middle([1, 2, 4]), middle([1, 2, 3, 4])));
+console.log(assertArraysEqual(middle([1, 2, 4, 3, 2, 5]), [4, 3]));
