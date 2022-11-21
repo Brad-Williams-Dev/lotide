@@ -1,0 +1,26 @@
+{
+  "name": "@bradwilliams1990/lotide",
+  "version": "1.0.0",
+  "description": "Clone of the Lodash library",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brad-Williams-Dev/lotide.git"
+  },
+  "author": "Brad Williams",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brad-Williams-Dev/lotide/issues"
+  },
+  "homepage": "https://github.com/Brad-Williams-Dev/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}

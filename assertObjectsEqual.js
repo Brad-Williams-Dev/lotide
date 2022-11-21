@@ -22,8 +22,6 @@ const eqObjects = function(object1, object2) {
 };
 
 const assertObjectsEqual = function(actual, expected) {
-  const inspect = require('util').inspect;
-
   let isEqual = eqObjects(actual, expected);
 
   if (!isEqual) {
@@ -33,9 +31,10 @@ const assertObjectsEqual = function(actual, expected) {
   }
 };
 
+module.exports = assertObjectsEqual;
 
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
 
-assertObjectsEqual({ a: "1", b: "2" }, { b: "2", a: "1" });
-assertObjectsEqual({ a: "1", b: "2", c: "12", e: "3" }, { b: "2", a: "1", e: "3", c: "12" });
+// assertObjectsEqual({ a: "1", b: "2" }, { b: "2", a: "1" });
+// assertObjectsEqual({ a: "1", b: "2", c: "12", e: "3" }, { b: "2", a: "1", e: "3", c: "12" });

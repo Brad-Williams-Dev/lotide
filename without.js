@@ -16,17 +16,19 @@ const eqArrays = function(array1, array2) {
 };
 
 const without = function(source, itemsToRemove) {
-  let newArr = [];
+  const result = [];
   for (let i = 0; i < source.length; i++) {
     if (source[i] !== itemsToRemove[i]) {
-      newArr.push(source[i]);
+      result.push(source[i]);
     }
   }
-  console.log(newArr);
+  return result;
 };
 
-without([1, 2, 3], [1]);
-without(["1", "2", "3"], [1, 2, "3"]);
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]);
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+module.exports = without;
+
+// without([1, 2, 3], [1]);
+// without(["1", "2", "3"], [1, 2, "3"]);
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]);
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);

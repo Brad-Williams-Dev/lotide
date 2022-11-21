@@ -12,25 +12,25 @@ const findKeyByValue = function(obj, val) {
   return answer;
 };
 
-
+module.exports = findKeyByValue;
 
 
 // TEST CODE //
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sci_fi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama: "The Wire"
+// };
 
-const bestTVShowsByGenre1 = {
-  animated: "The Simpsons",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "Everybody Loves Raymond"
-};
+// const bestTVShowsByGenre1 = {
+//   animated: "The Simpsons",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama: "Everybody Loves Raymond"
+// };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
-assertEqual(findKeyByValue(bestTVShowsByGenre1, "The Simpsons"), 'animated');
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre1, "The Simpsons"), 'animated');
 
-console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// console.log(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");

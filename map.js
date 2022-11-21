@@ -29,10 +29,12 @@ const map = function(array, callback) {
   return results;
 };
 
-const words = ["ground", "control", "to", "major", "tom"];
+module.exports = map;
 
-assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
+// const words = ["ground", "control", "to", "major", "tom"];
+
+// assertArraysEqual(map(words, word => word[0]), ['g', 'c', 't', 'm', 't']);
 
 
-const results1 = map(words, word => word[0]);
-console.log(results1);
+// const results1 = map(words, word => word[0]);
+// console.log(results1);
